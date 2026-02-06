@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- block1: Навигация -->
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="burger">☰</label>
+
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="https://via.placeholder.com/100x50?text=LOGO" alt="Логотип">
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="#">Главная</a></li>
+                <li class="has-submenu">
+                    <a href="#">Каталог</a>
+                    <ul class="submenu">
+                        <li><a href="#">Одежда</a></li>
+                        <li><a href="#">Обувь</a></li>
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Спортинвентарь</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Корзина</a></li>
+            </ul>
+
+            <form class="search-form">
+                <input type="search" placeholder="Поиск...">
+            </form>
+        </nav>
+    </header>
+
+    <!-- block2: Форма поиска с фильтрами -->
+    <section class="search-filters">
+        <form>
+            <input type="text" placeholder="Что ищем?" required>
+            <select>
+                <option>Все категории</option>
+                <option>Одежда</option>
+                <option>Обувь</option>
+            </select>
+            <div class="price-range">
+                <input type="number" min="0" placeholder="От" required>
+                <input type="number" min="0" placeholder="До" required>
+            </div>
+            <div class="filters">
+                <label><input type="checkbox"> Новинки</label>
+                <label><input type="checkbox"> Акции</label>
+                <label><input type="checkbox"> В наличии</label>
+            </div>
+            <button type="submit">Найти</button>
+        </form>
+    </section>
+
+    <!-- block3: Карточки товаров -->
+    <section class="product-cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <h3>Футболка</h3>
+            <p class="price">1 499 ₽</p>
+            <div class="rating">★★★★☆</div>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <h3>Кроссовки</h3>
+            <p class="price">5 999 ₽</p>
+            <div class="rating">★★★★★</div>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <h3>Рюкзак</h3>
+            <p class="price">2 799 ₽</p>
+            <div class="rating">★★★☆☆</div>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <h3>Шапка</h3>
+            <p class="price">899 ₽</p>
+            <div class="rating">★★★★☆</div>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <h3>Перчатки</h3>
+            <p class="price">699 ₽</p>
+            <div class="rating">★★★☆☆</div>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <h3>Сумка</h3>
+            <p class="price">3 299 ₽</p>
+            <div class="rating">★★★★★</div>
+            <button class="btn-cart">В корзину</button>
+        </div>
+    </section>
+
+    <!-- block4: Страница контактов -->
+    <section class="contacts-page">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <p>📍 г. Москва, ул. Тверская, д. 1</p>
+            <p>📞 +7 (495) 123-45-67</p>
+            <p>✉️ info@shop.ru</p>
+            <p>🕒 Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00</p>
+        </div>
+        <form class="feedback-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Тема">
+            <textarea placeholder="Сообщение"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.408289783342!2d37.61763371591647!3d55.75581478060557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5d8c5a0e8d%3A0x4aba4f5d0a4a4a4a!2z0JzRgNCz0LXQstC90YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sru!4v1700000000000!5m2!1sru!2sru" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- block5: Галерея (статичная сетка) -->
+    <section class="gallery">
+        <h2>Галерея товаров</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+            <img src="https://via.placeholder.com/200x200" alt="Товар">
+        </div>
+    </section>
+
+    <!-- block6: Корзина (макет) -->
+    <section class="cart-page">
+        <h2>Корзина</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Цена</th>
+                    <th>Кол-во</th>
+                    <th>Итого</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://via.placeholder.com/50x50"> Футболка</td>
+                    <td>1 499 ₽</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>1 499 ₽</td>
+                    <td><button>×</button></td>
+                </tr>
+                <tr>
+                    <td><img src="https://via.placeholder.com/50x50"> Кроссовки</td>
+                    <td>5 999 ₽</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>5 999 ₽</td>
+                    <td><button>×</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <p>Сумма: 7 498 ₽</p>
+            <p>Доставка: 300 ₽</p>
+            <p><strong>Итого: 7 798 ₽</strong></p>
+            <button class="btn-checkout">Оформить заказ</button>
+        </div>
+    </section>
+
+    <!-- block7: Личный кабинет (макет одной вкладки) -->
+    <section class="profile-page">
+        <h2>Личный кабинет</h2>
+        <div class="profile-sidebar">
+            <ul>
+                <li>Профиль</li>
+                <li>Заказы</li>
+                <li>Избранное</li>
+                <li>Бонусы</li>
+                <li>Настройки</li>
+            </ul>
+        </div>
+        <div class="profile-content">
+            <h3>Мои данные</h3>
+            <form>
+                <input type="text" value="Иван Иванов">
+                <input type="email" value="ivan@example.com">
+                <input type="tel" value="+7 (999) 123-45-67">
+                <button>Сохранить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- block8: Футер -->
+    <footer class="site-footer">
+        <div class="footer-col">
+            <h4>О магазине</h4>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Партнёры</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Помощь покупателю</h4>
+            <ul>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Возврат</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <ul>
+                <li>Телефон: +7 (495) 123-45-67</li>
+                <li>Email: info@shop.ru</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Соцсети</h4>
+            <ul>
+                <li><a href="#">VK</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Интернет-магазин. Все права защищены.
+        </div>
+    </footer>
+
+</body>
+</html>
